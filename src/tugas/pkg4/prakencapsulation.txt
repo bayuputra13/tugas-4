@@ -1,0 +1,43 @@
+package prakencapsulation;
+import java.util.Scanner;
+public class PrakEncapsulation {
+public static void main(String[] args) {
+    Scanner in_1 = new Scanner(System.in);
+    Scanner in_2 = new Scanner(System.in);
+        int pilihan ;
+        int a = 0;
+        String nama,alamat,notelp,email;
+        Enc_2 isi[] = new Enc_2[10];
+        do{
+    System.out.println("~~~~~~~~~Daftar Alamat~~~~~~~~~");
+    System.out.println("1. Tambahkan Data ");
+    System.out.println("2. Tampilkan Semua  ");
+    System.out.println("3. Keluar ");          
+    System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+    System.out.print(" Masukan Pilihan : ");
+            pilihan = in_1.nextInt();
+            switch(pilihan){
+                case 1:
+                    System.out.print("Masukan nama anda         : ");
+                    nama = in_2.nextLine(); 
+                    System.out.print("Masukan alamat anda       : ");
+                    alamat = in_2.nextLine();
+                    System.out.print("Masukan Notelp anda       : ");
+                    notelp = in_2.nextLine();
+                    System.out.print("Masukan E-mail anda       : ");
+                    email = in_2.nextLine();
+                    isi[a] = new Enc_2 (nama,alamat,notelp,email);
+                    a++;
+                    break;
+                case 2:              
+                    System.out.println(" 2. Seluruh Data ");
+                    for ( int j=0; j<a; j++){
+                        isi[j].tampilkan();
+                        System.out.println("");
+                    }
+                    Enc_2.total();
+                    break;
+                    }
+        }while (pilihan !=3);
+    }
+}

@@ -1,0 +1,46 @@
+package prakencapsulation;
+class Enc_2 {
+    private String nama,alamat,notelp,email;
+    private String [] data = new String [10];
+    private static int totaldata = 0;
+    public Enc_2 (String nama,String alamat,String notelp,String email){ 
+        this.nama = nama;
+        this.alamat = alamat;
+        this.notelp = notelp;
+        this.email = email;
+        totaldata++;
+    }
+    public void setNama(String a){ 
+        nama = a;
+    }
+    public String getNama(){ 
+        return nama;
+    }
+    public void setAlamat(String b){ 
+        alamat = b;
+    }
+    public String getAlamat(){ 
+        return alamat;
+    }
+    public void setNotelp (String c){ 
+        notelp = c;
+    }
+    public String getNotelp (){ 
+        return notelp;
+    }
+    public void setEmail(String d){  
+        email = d;
+    }
+    public String getEmail(){ 
+        return email;
+    }
+    public void tampilkan(){
+        System.out.println("Nama        : "+getNama()); 
+        System.out.println("Alamat      : "+getAlamat());
+        System.out.println("Nomor telp  : "+getNotelp());
+        System.out.println("Email       : "+getEmail());
+    }
+        public static void total (){
+            System.out.println(" Memiliki Data di Buku Alamat : " +totaldata);
+        }
+    }
